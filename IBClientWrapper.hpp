@@ -2,10 +2,13 @@
 #define IB_CLIENT_WRAPPER_H
 #include "IBClient.hpp"
 #include <boost/python.hpp>
+#include <boost/python/wrapper.hpp>
 #include "Contract.h"
 #include "Execution.h"
 #include "ScannerSubscription.h"
 #include "Order.h"
+
+using namespace boost::python;
 
 struct IBClientWrapper : public IBClient, wrapper<IBClient>
 {
